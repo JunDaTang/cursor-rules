@@ -6,8 +6,8 @@ alwaysApply: true
 # 项目通用规范
 
 ## 技术栈
-- Python 3.10
-- Poetry 管理依赖
+- Python 3.11
+- uv 管理依赖
 - GitHub Actions 自动构建和发布
 - 使用 GitHub 作为代码托管平台
 - 使用 Bash 脚本
