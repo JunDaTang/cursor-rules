@@ -1,0 +1,81 @@
+<mxfile host="65bd71144e">
+    <diagram name="测试开发与项目状态检测流程" id="test-dev-status">
+        <mxGraphModel dx="710" dy="296" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="start" value="开始" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="40" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="check_readme" value="检查README.md是否存在" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="100" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="new_project" value="收集需求" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="110" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="check_status" value="检查开发状态" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="200" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="not_started" value="提示开始开发" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="280" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="partial" value="提示继续开发/测试" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="280" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="done" value="提示维护或补充测试" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="280" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="test_dev" value="测试开发" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="360" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="test_done" value="完成测试，更新README.md，保存测试文件，提示用户" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="430" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="test_fail" value="测试未通过，提示补充测试" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="420" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="end" value="结束" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="334" y="545" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" parent="1" source="start" target="check_readme" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" parent="1" source="check_readme" target="new_project" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="80" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge3" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="check_readme" target="check_status" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="130" y="170" as="sourcePoint"/>
+                        <mxPoint x="210" y="240" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge4" value="未开始" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" parent="1" source="check_status" target="not_started" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge5" value="部分完成" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" parent="1" source="check_status" target="partial" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge6" value="全部完成" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" parent="1" source="check_status" target="done" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" parent="1" source="partial" target="test_dev" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" parent="1" source="test_dev" target="test_done" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" parent="1" source="test_dev" target="test_fail" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" parent="1" source="test_done" target="end" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" parent="1" source="test_fail" target="test_dev" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
