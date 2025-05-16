@@ -1,0 +1,42 @@
+1. 通用规则层（common）
+这些规则适用于所有项目，不受编程语言或框架限制：
+
+general.mdc：项目通用开发规范
+
+git.mdc：Git提交规范
+
+gitflow.mdc：GitFlow工作流规范
+
+document.mdc：文档编写标准
+
+2. 语言规则层（languages）
+针对特定编程语言的规则：
+
+python.mdc：Python编码规范
+
+typescript.mdc：TypeScript类型系统和最佳实践
+
+java.mdc：Java编码标准
+
+golang.mdc：Go语言规范
+
+3. 框架规则层（frameworks）
+针对特定框架的规则：
+
+react.mdc：React组件设计和Hooks使用
+
+vuejs.mdc：Vue.js组件结构和生命周期
+
+django.mdc：Django项目结构和视图设计
+
+flutter.mdc：Flutter UI组件和状态管理
+
+fastapi.mdc：FastAPI API设计
+
+nextjs.mdc：Next.js应用结构
+
+flask.mdc：Flask应用架构
+
+swiftui.mdc：SwiftUI界面设计
+
+tailwind.mdc：Tailwind CSS样式指南
